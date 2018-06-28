@@ -3,8 +3,69 @@
 <head>
 <meta charset="utf-8">
 <title>bsc1jan18</title>
+<link rel="stylesheet" type="text/css" href="default.css">
+<!--<script src="default.js"></script>-->
 </head>
 <body>
-    <h1>CONSTRUCTION IN PROGRESS</h1>
+    <div id="#1">
+        Event:<br>
+        Completion Date:<br>
+        Description:
+        <p id="#C1"></p>
+        <hr>
+    </div>
+    <div id="#2">
+        Event:<br>
+        Completion Date:<br>
+        Description:
+        <p id="#C2"></p>
+        <hr>
+    </div>
+    <div id="#2">
+        Event:<br>
+        Completion Date:<br>
+        Description:
+        <p id="#C3"></p>
+        <hr>
+    </div>
+    <div id="ad">
+        <p>
+            <span class="big">get ur java done @ &euro;30</span>
+        </p>
+    </div>
+<script>
+function dispCountdown(id, endDate){
+    // Set the date we're counting down to=endDate==>new Date("Sep 5, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+let update = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = endDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById(id).innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById(id).innerHTML = "EXPIRED";
+  }
+}, 1000);
+}
+dispCountdown("#C1", new Date("Sep 5, 2018 15:37:25").getTime());
+dispCountdown("#C2", new Date("Sep 5, 2018 15:37:25").getTime());
+dispCountdown("#C3", new Date("Sep 5, 2018 15:37:25").getTime());
+</script>
 </body>
 </html>
