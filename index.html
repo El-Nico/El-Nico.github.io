@@ -5,32 +5,81 @@
 <title>bsc1jan18</title>
 <link rel="stylesheet" type="text/css" href="default.css">
 <!--<script src="default.js"></script>-->
+<link rel="icon" type="image/jpg" href="WhatsApp%20Image%202018-06-29%20at%2020.27.15.jpeg">
 </head>
 <body>
     <div id="#1">
-        Event:<br>
-        Completion Date:<br>
-        Description:
-        <p id="#C1"></p>
+        <table >
+            <tr>
+                <td>Event:</td><td>Computer-based in-class exam 5%(Web and Multimedia)</td>
+            </tr>
+            <tr>
+                <td>Completion Date:</td><td>04 July 2018</td>
+            </tr>
+            <tr>
+                <td>Description:</td><td>some kind of test</td>
+            </tr>
+        </table>
+        <p id="#C1" class="countDownParagraph"></p>
         <hr>
     </div>
     <div id="#2">
-        Event:<br>
-        Completion Date:<br>
-        Description:
-        <p id="#C2"></p>
+        <table>
+        <tr>
+            <td>Event:</td>
+            <td>Group presentation- Analysis of Website- 15%</td>
+        </tr>
+            <tr>
+                <td>Completion Date:</td>
+                <td>25 July - soft copy to be submitted by 23:55pm</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>in-class presentation on a website your group chose</td>
+            </tr>
+        </table>
+        <p id="#C2" class="countDownParagraph"></p>
         <hr>
     </div>
-    <div id="#2">
-        Event:<br>
-        Completion Date:<br>
-        Description:
-        <p id="#C3"></p>
+    <div id="#3">
+        <table>
+            <tr>
+                <td>Event:</td>
+                <td>Submission of programming project 2</td>
+            </tr>
+            <tr>
+                <td>Completion Date:</td>
+                <td>29 July 11:55pm</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>Columnar transposition cipher</td>
+            </tr>
+        </table>
+        <p id="#C3" class="countDownParagraph"></p>
+        <hr>
+    </div>
+    <div id="#4">
+        <table>
+            <tr>
+                <td>Event:</td>
+                <td>Practical web design project-80%</td>
+            </tr>
+            <tr>
+                <td>Completion Date:</td>
+                <td>10 August 2018</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>Make a portfolio website</td>
+            </tr>
+        </table>
+        <p id="#C4" class="countDownParagraph"></p>
         <hr>
     </div>
     <div id="ad">
         <p>
-            <span class="big">get ur java done @ &euro;30</span>
+            <span class="big">get ur java project done @ &euro;30</span>
         </p>
     </div>
 <script>
@@ -53,8 +102,8 @@ let update = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Display the result in the element with id="demo"
-  document.getElementById(id).innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById(id).innerHTML = days + "days " + hours + "hours "
+  + minutes + "minutes " + seconds + "seconds ";
 
   // If the count down is finished, write some text 
   if (distance < 0) {
@@ -63,9 +112,10 @@ let update = setInterval(function() {
   }
 }, 1000);
 }
-dispCountdown("#C1", new Date("Sep 5, 2018 15:37:25").getTime());
-dispCountdown("#C2", new Date("Sep 5, 2018 15:37:25").getTime());
-dispCountdown("#C3", new Date("Sep 5, 2018 15:37:25").getTime());
+dispCountdown("#C1", new Date("Jul 4, 2018 10:00:00").getTime());
+dispCountdown("#C2", new Date("Jul 25, 2018 23:55:00").getTime());
+dispCountdown("#C3", new Date("Jul 29, 2018 11:55:00").getTime());
+dispCountdown("#C4", new Date("Aug 10, 2018").getTime());
 </script>
 </body>
 </html>
