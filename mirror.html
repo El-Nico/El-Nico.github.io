@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>bsc1jan18</title>
+<link rel="stylesheet" type="text/css" href="default.css">
+<!--<script src="default.js"></script>-->
+<link rel="icon" type="image/jpg" href="WhatsApp%20Image%202018-06-29%20at%2020.27.15.jpeg">
+</head>
+<body>
+    <div id="#1">
+        <table >
+            <tr>
+                <td>Event:</td><td>Computer-based in-class exam 5%(Web and Multimedia)</td>
+            </tr>
+            <tr>
+                <td>Completion Date:</td><td>04 July 2018</td>
+            </tr>
+            <tr>
+                <td>Description:</td><td>some kind of test</td>
+            </tr>
+        </table>
+        <p id="#C1" class="countDownParagraph"></p>
+        <hr>
+    </div>
+    <div id="#2">
+        <table>
+        <tr>
+            <td>Event:</td>
+            <td>Group presentation- Analysis of Website- 15%</td>
+        </tr>
+            <tr>
+                <td>Completion Date:</td>
+                <td>25 July - soft copy to be submitted by 23:55pm</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>in-class presentation on a website your group chose</td>
+            </tr>
+        </table>
+        <p id="#C2" class="countDownParagraph"></p>
+        <hr>
+    </div>
+    <div id="#3">
+        <table>
+            <tr>
+                <td>Event:</td>
+                <td>Submission of programming project 2</td>
+            </tr>
+            <tr>
+                <td>Completion Date:</td>
+                <td>29 July 11:55pm</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>Columnar transposition cipher</td>
+            </tr>
+        </table>
+        <p id="#C3" class="countDownParagraph"></p>
+        <hr>
+    </div>
+    <div id="#4">
+        <table>
+            <tr>
+                <td>Event:</td>
+                <td>Practical web design project-80%</td>
+            </tr>
+            <tr>
+                <td>Completion Date:</td>
+                <td>10 August 2018</td>
+            </tr>
+            <tr>
+                <td>Description:</td>
+                <td>Make a portfolio website</td>
+            </tr>
+        </table>
+        <p id="#C4" class="countDownParagraph"></p>
+        <hr>
+    </div>
+    <div id="ad">
+        <p>
+            <span class="big">get ur java project done @ &euro;30</span>
+        </p>
+    </div>
+<script>
+function dispCountdown(id, endDate){
+    // Set the date we're counting down to=endDate==>new Date("Sep 5, 2018 15:37:25").getTime();
+
+// Update the count down every 1 second
+let update = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = endDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById(id).innerHTML = days + "days " + hours + "hours "
+  + minutes + "minutes " + seconds + "seconds ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById(id).innerHTML = "EXPIRED";
+  }
+}, 1000);
+}
+dispCountdown("#C1", new Date("Jul 4, 2018 10:00:00").getTime());
+dispCountdown("#C2", new Date("Jul 25, 2018 23:55:00").getTime());
+dispCountdown("#C3", new Date("Jul 29, 2018 11:55:00").getTime());
+dispCountdown("#C4", new Date("Aug 10, 2018").getTime());
+function addEvent(eventName, completionDate, description){
+    let newDiv= document.createElement('div');
+    newDiv.style.width = "100px";
+newDiv.style.height = "100px";
+newDiv.style.background = "red";
+newDiv.style.color = "white";
+    newDiv.innerHTML="jus chillin";
+    document.body.appendChild(newDiv);
+}
+addEvent();
+</script>
+</body>
+</html>
